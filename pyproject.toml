@@ -1,15 +1,18 @@
 [tool.poetry]
-name = "template"
+name = "flik-demo"
 version = "0.1.0"
-description = "Template Project"
+description = "Flik Mavlink Demonstration"
 authors = ["Ryan Lagoy <rlagoy@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
+pymavlink = "^2.4.49"
+pyserial = "^3.5"
+mavproxy = "^1.8.74"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^5.2"
-pylint = "^2.11.1"
+pytest = "^8.4.2"
+pylint = "^4.0.2"
 black = "22.3.0"
 pre-commit = "^2.19.0"
 pre-commit-hooks = "^4.0.1"
