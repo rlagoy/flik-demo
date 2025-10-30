@@ -22,7 +22,7 @@ typing-extensions = {version = ">=4", markers = "python_version < \"3.11\""}
 
 [[package]]
 name = "black"
-version = "22.3.0"
+version = "25.9.0"
 description = "The uncompromising code formatter."
 category = "dev"
 optional = false
