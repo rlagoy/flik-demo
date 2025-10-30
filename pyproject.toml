@@ -14,7 +14,7 @@ mavproxy = "^1.8.74"
 pytest = "^8.4.2"
 pylint = "^4.0.2"
 black = "25.9.0"
-pre-commit = "^6.0.0"
+pre-commit = "^4.3.0"
 reorder-python-imports = "^2.6.0"
 
 [build-system]
