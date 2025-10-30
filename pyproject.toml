@@ -21,3 +21,9 @@ reorder-python-imports = "^2.6.0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+files = ["."]
+
+ignore_missing_imports = true
