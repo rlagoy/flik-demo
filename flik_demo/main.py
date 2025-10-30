@@ -1,4 +1,4 @@
-"""Example test code to excercise servo motor."""
+"""Example test code to exercise servo motor."""
 
 import time
 import argparse
