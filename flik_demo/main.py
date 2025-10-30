@@ -1,17 +1,18 @@
 """Example test code to excercise servo motor."""
+
 import time
+import argparse
+
 from mavlink_device import MAVLinkDevice  # pylint: disable=import-error
 
 
-def main() -> None:
+def main(dev: str) -> None:
     """Main hardware test function"""
 
-    connection_string = "/dev/tty.usbmodem2101,115200"
-
     start_time = time.time()
-    mav_device = MAVLinkDevice(connection_string)
+    mav_device = MAVLinkDevice(dev)
     mav_device.connect()
-    print("Waiting for heartbeat...")
+    print(f"Waiting for heartbeat on {dev}")
     _ = mav_device.wait_heartbeat()
     print("Heartbeat received!")
     print(f"Connected within {time.time()-start_time} seconds.")
@@ -39,4 +40,13 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    p = argparse.ArgumentParser(description="FLIK Servo Motor Test")
+    p.add_argument(
+        "dev",
+        help="MAVLink device path",
+        type=str,
+        default="/dev/tty.usbmodem2101,115200",
+    )
+    args = p.parse_args()
+
+    main(args.dev)
