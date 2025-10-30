@@ -3,9 +3,8 @@ MavlinkDevice: A small helper around pymavlink for common tasks,
 including heartbeats and servo control.
 """
 
-from __future__ import annotations
 import time
-from typing import Dict, Iterable, Optional
+from typing import Iterable, Optional
 
 from pymavlink import mavutil
 
@@ -116,7 +115,7 @@ class MAVLinkDevice:
         self.set_rc_override({servo: pwm_us})
         return None
 
-    def set_rc_override(self, channel_pwm: Dict[int, int]) -> None:
+    def set_rc_override(self, channel_pwm: dict[int, int]) -> None:
         """
         Send RC_CHANNELS_OVERRIDE.
 
